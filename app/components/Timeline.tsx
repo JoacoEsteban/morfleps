@@ -1,3 +1,5 @@
+"use client";
+
 export default function Timeline() {
   return (
     <>
@@ -5,7 +7,7 @@ export default function Timeline() {
         className="twitter-timeline"
         href="https://twitter.com/morfleps?ref_src=twsrc%5Etfw"
       >
-        Tweets by morfleps
+        Seguí la revolución
       </a>
       <script async src="https://platform.twitter.com/widgets.js"></script>
     </>
