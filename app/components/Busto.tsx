@@ -15,7 +15,7 @@ const Common = dynamic(
 //   { ssr: false },
 // );
 
-export function Morfleps(props: PropsWithoutRef<{}>) {
+export function Morfleps(props: PropsWithoutRef<any>) {
   const { scene } = useGLTF("/static/models/morfleps-busto.glb");
 
   useFrame(({ clock }) => {

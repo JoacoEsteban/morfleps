@@ -27,17 +27,21 @@ export const Common = ({ color }: { color?: Color }) => (
 
 const View = forwardRef(
   (
-    { children, orbit, ...props }: PropsWithChildren<{ orbit?: boolean }>,
+    {
+      children,
+      orbit,
+      ...props
+    }: PropsWithChildren<{ orbit?: boolean; className: string }>,
     ref,
   ) => {
-    const localRef = useRef(null);
+    const localRef = useRef<HTMLElement>(null);
     useImperativeHandle(ref, () => localRef.current);
 
     return (
       <>
-        <div ref={localRef} {...props} />
+        <div ref={localRef as any} {...props} />
         <Three>
-          <ViewImpl track={localRef}>
+          <ViewImpl track={localRef as any}>
             {children}
             {orbit && <OrbitControls />}
           </ViewImpl>
