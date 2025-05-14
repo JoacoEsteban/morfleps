@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import { Layout } from "@/components/dom/Layout";
 import { Analytics } from "@vercel/analytics/next";
+import { Afacad } from "next/font/google";
+import classNames from "classnames";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -11,6 +13,13 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+const afacad = Afacad({ variable: "--font-afacad", subsets: ["latin"] }); // You can add weights if needed
+const instrumentSerif = Instrument_Serif({
+  weight: ["400"],
+  variable: "--font-instrument-serif",
   subsets: ["latin"],
 });
 
@@ -27,7 +36,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={classNames([
+          geistSans.variable,
+          geistMono.variable,
+          afacad.variable,
+          instrumentSerif.variable,
+          "antialiased",
+        ])}
       >
         <Layout>{children}</Layout>
         <Analytics />
