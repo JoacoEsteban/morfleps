@@ -38,3 +38,18 @@ h1 {
   font-family: var(--font-afacad);
   font-family: var(--font-instrument-serif);
 }
+
+.animate-float {
+  animation: animate-float 0.7s infinite cubic-bezier(0.5, 0, 0.5, 1);
+}
+@keyframes animate-float {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

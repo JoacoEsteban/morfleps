@@ -9,7 +9,7 @@ export default function Home() {
         <h1 className="max-md:text-[12vw] md:text-[8rem] font-bold text-center w-full">
           <span className="relative">
             MORFLEPS
-            <span className="absolute rotate-12 scale-50 top-5 right-0 translate-x-[50%]">
+            <span className="absolute rotate-12 scale-50 top-5 right-0 translate-x-[50%] animate-float">
               ✌️
             </span>
           </span>
