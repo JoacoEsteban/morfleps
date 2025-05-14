@@ -25,7 +25,15 @@ export default function Home() {
         </div>
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a href="https://x.com/joacodotio">Dev</a>
+        <span>
+          Por&nbsp;
+          <a className="!underline" href="https://joaco.io">
+            Joaco
+          </a>
+        </span>
+        <a className="font-bold" href="https://x.com/joacodotio">
+          𝕏
+        </a>
       </footer>
     </div>
   );
