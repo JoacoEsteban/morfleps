@@ -1,28 +1,34 @@
 import Image from "next/image";
 import Timeline from "./components/Timeline";
 import Busto from "./components/Busto";
+import { PropsWithChildren } from "react";
 
+function Container({ children }: PropsWithChildren) {
+  return <div className="p-8 w-full">{children}</div>;
+}
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <h1 className="max-md:text-[12vw] md:text-[8rem] font-bold text-center w-full">
-          <span className="relative">
-            MORFLEPS
-            <span className="absolute rotate-12 scale-50 top-5 right-0 translate-x-[50%] animate-float">
-              ✌️
+    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen  pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start ">
+        <Container>
+          <h1 className="max-md:text-[12vw] md:text-[8rem] font-bold text-center w-full">
+            <span className="relative">
+              MORFLEPS
+              <span className="absolute rotate-12 scale-50 top-5 right-0 translate-x-[50%] animate-float">
+                ✌️
+              </span>
             </span>
-          </span>
-        </h1>
-        <h2 className="w-full text-center max-md:text-[5vw] md:text-2xl">
-          El Proximo Presidente De La Confederacion Argentina
-        </h2>
+          </h1>
+          <h2 className="w-full text-center max-md:text-[5vw] md:text-2xl">
+            El Proximo Presidente De La Confederacion Argentina
+          </h2>
+        </Container>
 
         <Busto />
 
-        <div className="w-full">
+        <Container>
           <Timeline />
-        </div>
+        </Container>
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
         <span>
